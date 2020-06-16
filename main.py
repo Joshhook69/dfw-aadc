@@ -166,13 +166,13 @@ while(True):
     def Gate(flight):
         route = flight['planned_route'].upper()
         gate = ""
-        if "BRDJE" in route:
+        if "BRDJE" and "SEEVR" in route:
             gate = "BRDJE"
-        elif "BEREE" in route:
+        elif "BEREE" and "WHINY" in route:
             gate = "BEREE"
-        elif "BOOVE" in route:
+        elif "BOOVE" and "SOCKK" in route:
             gate = "BOOVE"
-        elif "VKTRY" in route:
+        elif "VKTRY" and "JOVEM" in route:
             gate = "VKTRY"
         else:
             gate = "ERROR"

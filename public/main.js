@@ -111,7 +111,7 @@ var myChart = new Chart(ctx, {
 
                 }, {
                         label: 'Arrival Rate',
-                        data: [114, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114],
+                        data: [120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120],
                         type: 'line',
                         backgroundColor: 'rgba(0,0,0, 0.01)',
                         borderColor: 'rgba(0, 0, 0, 1)',

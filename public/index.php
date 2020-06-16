@@ -21,7 +21,9 @@
                                         </div>
                         </div>
                 </aadc-app>
-
+                <select>
+                        <option>Test</option>
+                </select>
                 <div class="chart-container" style="position: relative; height:400px;">
                 <canvas id="myChart"></canvas>
                 </div>
