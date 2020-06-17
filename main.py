@@ -3,8 +3,9 @@ import json
 import math
 import datetime
 import time
-
+counter = 0
 while(True):
+    print(counter)
     now = datetime.datetime.utcnow()
     hour = now.strftime("%H")
     min = int(now.strftime("%M"))
@@ -114,7 +115,7 @@ while(True):
     with open("./vatsim-data.json", errors='ignore') as jsondata:
         data = json.load(jsondata)
 
-    with open("./public/dfw-data.json", errors='ignore') as activedendata:
+    with open("/var/www/vswalife.com/dfw-aadc/public/dfw-data.json", errors='ignore') as activedendata:
         activedata = json.load(activedendata)
 
 
@@ -185,7 +186,7 @@ while(True):
         else:
             gate = "ERROR"
         flight.update({"gate": gate})
-
+#        print(gate)
     def index(flight):
         if(int(flight['planned_arrtime']) < 100):
             hourarr = 0
@@ -205,6 +206,7 @@ while(True):
         flightactive(item)
         Gate(item)
         index(item)
-    with open('./public/dfw-data.json', 'w') as json_file:
+    with open('/var/www/vswalife.com/dfw-aadc/public/dfw-data.json', 'w') as json_file:
 	    json.dump(activedata, json_file)
     time.sleep(60)
+    counter += 1
